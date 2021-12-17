@@ -2066,16 +2066,31 @@ errorHandler:
 	return output;
 }
 
-void luaU_decompile(const Proto* f, int dflag)
+static void cannot(const char* name, const char* what, const char* mode)
+{
+	fprintf(stderr, "%s: cannot %s %sput file ", "luadec", what, mode);
+	perror(name);
+	exit(EXIT_FAILURE);
+}
+
+void luaU_decompile(const Proto* f, int dflag, const char* filename)
 {
 	char* code;
 	debug = dflag;
 	code = ProcessCode(f, 0);
 	printf("%s\n", code);
+	const char* filename_tmp = malloc(strlen(filename + 5));
+	if (filename_tmp == 0) cannot(filename, "write", "out");
+	sprintf(filename_tmp, "%s.lua", filename);
+	FILE* D = fopen(filename_tmp, "wb");
+	if (D == NULL) cannot(filename, "open", "out");
+	fwrite(code, 1, strlen(code), D);
+	if (ferror(D)) cannot(filename, "write", "out");
+	fclose(D);
 	free(code);
 }
 
-void luaU_decompileFunctions(const Proto* f, int dflag)
+void luaU_decompileFunctions(const Proto* f, int dflag, const char ** filename)
 {
 	int i, n = f->sizep;
 	char* code;
@@ -2084,6 +2099,16 @@ void luaU_decompileFunctions(const Proto* f, int dflag)
 		printf("-----\nfunction");
 		code = ProcessCode(f->p[i], 0);
 		printf("%send\n", code);
+
+		const char* filename_tmp = malloc(strlen(filename[i] + 5));
+		if (filename_tmp == 0) cannot(filename, "write", "out");
+		sprintf(filename_tmp, "%s.lua", filename[i]);
+		FILE* D = fopen(filename_tmp, "wb");
+		if (D == NULL) cannot(filename[i], "open", "out");
+		fwrite(code, 1, strlen(code), D);
+		if (ferror(D)) cannot(filename[i], "write", "out");
+		fclose(D);
+
 		free(code);
 	}
 }

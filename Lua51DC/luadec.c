@@ -30,8 +30,8 @@ static char Output[] = { OUTPUT };	/* default output file name */
 static const char* output = Output;	/* output file name */
 static const char* progname = PROGNAME;	/* actual program name */
 
-void luaU_decompile(const Proto* f, int lflag);
-void luaU_decompileFunctions(const Proto* f, int lflag);
+void luaU_decompile(const Proto* f, int lflag, const char* filename);
+void luaU_decompileFunctions(const Proto* f, int lflag, const char ** filename);
 
 static void fatal(const char* message)
 {
@@ -153,15 +153,17 @@ int main(int argc, char* argv[])
 	if (argc <= 0) usage("no input files given", NULL);
 	L = lua_open();
 	luaB_opentests(L);
+
+	const char* filename[256] = {0};
 	for (i = 0; i < argc; i++)
 	{
-		const char* filename = IS("-") ? NULL : argv[i];
-		if (luaL_loadfile(L, filename) != 0) fatal(lua_tostring(L, -1));
+		filename[i] = IS("-") ? NULL : argv[i];
+		if (luaL_loadfile(L, filename[i]) != 0) fatal(lua_tostring(L, -1));
 	}
 	f = combine(L, argc);
 	if (functions)
-		luaU_decompileFunctions(f, debugging);
+		luaU_decompileFunctions(f, debugging, filename);
 	else
-		luaU_decompile(f, debugging);
+		luaU_decompile(f, debugging, filename[0]);
 	return 0;
 }
