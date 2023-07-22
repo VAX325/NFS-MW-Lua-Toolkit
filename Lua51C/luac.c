@@ -60,8 +60,8 @@ static void usage(const char* message, const char* arg)
 		"  -l       list\n"
 		"  -o name  output to file `name' (default is \"" OUTPUT "\")\n"
 		"  -p       parse only\n"
-		"  -s       strip debug information\n"
-		"  -v       show version information\n"
+		"  -s       strip debug information in dump\n"
+		"  -v       show "PROGNAME" version\n"
 		"  --       stop handling options\n",
 		progname);
 	exit(EXIT_FAILURE);

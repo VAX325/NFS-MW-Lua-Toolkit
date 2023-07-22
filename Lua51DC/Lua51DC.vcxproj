@@ -11,28 +11,28 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="lapi.c" />
-    <ClCompile Include="lauxlib.c" />
-    <ClCompile Include="lcode.c" />
-    <ClCompile Include="ldebug.c" />
-    <ClCompile Include="ldo.c" />
-    <ClCompile Include="ldump.c" />
-    <ClCompile Include="lfunc.c" />
-    <ClCompile Include="lgc.c" />
-    <ClCompile Include="llex.c" />
-    <ClCompile Include="lmem.c" />
-    <ClCompile Include="lobject.c" />
-    <ClCompile Include="lopcodes.c" />
-    <ClCompile Include="lparser.c" />
-    <ClCompile Include="lstate.c" />
-    <ClCompile Include="lstring.c" />
-    <ClCompile Include="ltable.c" />
-    <ClCompile Include="ltests.c" />
-    <ClCompile Include="ltm.c" />
+    <ClCompile Include="..\shared\lapi.c" />
+    <ClCompile Include="..\shared\lauxlib.c" />
+    <ClCompile Include="..\shared\lcode.c" />
+    <ClCompile Include="..\shared\ldebug.c" />
+    <ClCompile Include="..\shared\ldo.c" />
+    <ClCompile Include="..\shared\ldump.c" />
+    <ClCompile Include="..\shared\lfunc.c" />
+    <ClCompile Include="..\shared\lgc.c" />
+    <ClCompile Include="..\shared\llex.c" />
+    <ClCompile Include="..\shared\lmem.c" />
+    <ClCompile Include="..\shared\lobject.c" />
+    <ClCompile Include="..\shared\lopcodes.c" />
+    <ClCompile Include="..\shared\lparser.c" />
+    <ClCompile Include="..\shared\lstate.c" />
+    <ClCompile Include="..\shared\lstring.c" />
+    <ClCompile Include="..\shared\ltable.c" />
+    <ClCompile Include="..\shared\ltests.c" />
+    <ClCompile Include="..\shared\ltm.c" />
+    <ClCompile Include="..\shared\lundump.c" />
+    <ClCompile Include="..\shared\lvm.c" />
+    <ClCompile Include="..\shared\lzio.c" />
     <ClCompile Include="luadec.c" />
-    <ClCompile Include="lundump.c" />
-    <ClCompile Include="lvm.c" />
-    <ClCompile Include="lzio.c" />
     <ClCompile Include="output.c" />
     <ClCompile Include="print.c" />
     <ClCompile Include="proto.c" />
@@ -40,28 +40,28 @@
     <ClCompile Include="structs.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="lapi.h" />
-    <ClInclude Include="lauxlib.h" />
-    <ClInclude Include="lcode.h" />
-    <ClInclude Include="ldebug.h" />
-    <ClInclude Include="ldo.h" />
-    <ClInclude Include="lfunc.h" />
-    <ClInclude Include="lgc.h" />
-    <ClInclude Include="llex.h" />
-    <ClInclude Include="llimits.h" />
-    <ClInclude Include="lmem.h" />
-    <ClInclude Include="lobject.h" />
-    <ClInclude Include="lopcodes.h" />
-    <ClInclude Include="lparser.h" />
-    <ClInclude Include="lstate.h" />
-    <ClInclude Include="lstring.h" />
-    <ClInclude Include="ltable.h" />
-    <ClInclude Include="ltm.h" />
-    <ClInclude Include="lua.h" />
-    <ClInclude Include="lualib.h" />
-    <ClInclude Include="lundump.h" />
-    <ClInclude Include="lvm.h" />
-    <ClInclude Include="lzio.h" />
+    <ClInclude Include="..\shared\lapi.h" />
+    <ClInclude Include="..\shared\lauxlib.h" />
+    <ClInclude Include="..\shared\lcode.h" />
+    <ClInclude Include="..\shared\ldebug.h" />
+    <ClInclude Include="..\shared\ldo.h" />
+    <ClInclude Include="..\shared\lfunc.h" />
+    <ClInclude Include="..\shared\lgc.h" />
+    <ClInclude Include="..\shared\llex.h" />
+    <ClInclude Include="..\shared\llimits.h" />
+    <ClInclude Include="..\shared\lmem.h" />
+    <ClInclude Include="..\shared\lobject.h" />
+    <ClInclude Include="..\shared\lopcodes.h" />
+    <ClInclude Include="..\shared\lparser.h" />
+    <ClInclude Include="..\shared\lstate.h" />
+    <ClInclude Include="..\shared\lstring.h" />
+    <ClInclude Include="..\shared\ltable.h" />
+    <ClInclude Include="..\shared\ltm.h" />
+    <ClInclude Include="..\shared\lua.h" />
+    <ClInclude Include="..\shared\lualib.h" />
+    <ClInclude Include="..\shared\lundump.h" />
+    <ClInclude Include="..\shared\lvm.h" />
+    <ClInclude Include="..\shared\lzio.h" />
     <ClInclude Include="output.h" />
     <ClInclude Include="print.h" />
     <ClInclude Include="proto.h" />
@@ -105,11 +105,15 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\</OutDir>
     <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(SolutionDir)shared\;$(IncludePath)</IncludePath>
+    <TargetName>luadec</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\</OutDir>
     <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(SolutionDir)shared\;$(IncludePath)</IncludePath>
+    <TargetName>luadec</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -117,6 +121,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;LUA_OPNAMES;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,6 +137,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;LUA_OPNAMES;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

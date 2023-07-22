@@ -1949,6 +1949,7 @@ char* ProcessCode(const Proto* f, int indent)
 		}
 		case OP_TFORPREP:
 		{
+			int i = 0;
 			int prepCtr = 0;
 			int prep = 0;
 			int preps[10];
@@ -1998,7 +1999,7 @@ char* ProcessCode(const Proto* f, int indent)
 			 */
 			StringBuffer_set(str, "function");
 			StringBuffer_add(str, ProcessCode(f->p[c], F->indent));
-			for (i = 0; i < F->indent; i++) {
+			for (int i = 0; i < F->indent; i++) {
 				StringBuffer_add(str, "   ");
 			}
 			StringBuffer_add(str, "end");
@@ -2079,18 +2080,18 @@ void luaU_decompile(const Proto* f, int dflag, const char* filename)
 	debug = dflag;
 	code = ProcessCode(f, 0);
 	printf("%s\n", code);
-	const char* filename_tmp = malloc(strlen(filename + 5));
+	char* filename_tmp = malloc(strlen(filename + 5));
 	if (filename_tmp == 0) cannot(filename, "write", "out");
 	sprintf(filename_tmp, "%s.lua", filename);
 	FILE* D = fopen(filename_tmp, "wb");
 	if (D == NULL) cannot(filename, "open", "out");
-	fwrite(code, 1, strlen(code), D);
+	fwrite(code, sizeof(*code), strlen(code), D);
 	if (ferror(D)) cannot(filename, "write", "out");
 	fclose(D);
 	free(code);
 }
 
-void luaU_decompileFunctions(const Proto* f, int dflag, const char ** filename)
+void luaU_decompileFunctions(const Proto* f, int dflag, const char** filename)
 {
 	int i, n = f->sizep;
 	char* code;
@@ -2100,12 +2101,12 @@ void luaU_decompileFunctions(const Proto* f, int dflag, const char ** filename)
 		code = ProcessCode(f->p[i], 0);
 		printf("%send\n", code);
 
-		const char* filename_tmp = malloc(strlen(filename[i] + 5));
-		if (filename_tmp == 0) cannot(filename, "write", "out");
+		char* filename_tmp = malloc(strlen(filename[i] + 5));
+		if (filename_tmp == 0) cannot(filename[i], "write", "out");
 		sprintf(filename_tmp, "%s.lua", filename[i]);
 		FILE* D = fopen(filename_tmp, "wb");
 		if (D == NULL) cannot(filename[i], "open", "out");
-		fwrite(code, 1, strlen(code), D);
+		fwrite(code, sizeof(*code), strlen(code), D);
 		if (ferror(D)) cannot(filename[i], "write", "out");
 		fclose(D);
 

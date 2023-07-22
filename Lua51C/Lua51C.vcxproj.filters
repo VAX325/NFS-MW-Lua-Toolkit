@@ -11,142 +11,142 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="lparser.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lstate.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lstring.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="ltable.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="ltm.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lua.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lualib.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lundump.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lvm.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lzio.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lapi.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lauxlib.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lcode.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="ldebug.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="ldo.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lfunc.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lgc.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="llex.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="llimits.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lmem.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lobject.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="lopcodes.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="lapi.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="lcode.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="ldebug.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="ldo.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="ldump.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="lfunc.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="lgc.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="llex.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="lmem.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="lobject.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="lopcodes.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="lparser.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="lstate.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="lstring.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="ltable.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="ltests.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="ltm.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="lundump.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="lvm.c">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="lzio.c">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="luac.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lobject.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lopcodes.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lparser.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lstate.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lstring.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\ltable.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\ltests.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\ltm.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lundump.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lvm.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lzio.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lapi.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lauxlib.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lcode.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\ldebug.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\ldo.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\ldump.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lfunc.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lgc.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\llex.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\lmem.c">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="print.c">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="lauxlib.c">
-      <Filter>Source</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\shared\lcode.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\ldebug.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\ldo.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lfunc.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lgc.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\llex.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\llimits.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lmem.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lobject.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lopcodes.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lparser.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lstate.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lstring.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\ltable.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\ltm.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lua.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lualib.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lundump.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lvm.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lzio.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lapi.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\lauxlib.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

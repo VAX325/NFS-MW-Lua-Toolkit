@@ -17,21 +17,21 @@
 #endif
 
 #ifndef PROGNAME
-#define PROGNAME	"luadec"	/* program name */
+#define PROGNAME	"luadec"			/* program name */
 #endif
 
-#define	OUTPUT		"luadec.out"	/* default output file */
+#define	OUTPUT		"luadec.out"		/* default output file */
 
-static int debugging = 0;			/* debug decompiler? */
-static int functions = 0;			/* dump functions separately? */
-static int dumping = 1;			/* dump bytecodes? */
-static int stripping = 0;			/* strip debug information? */
-static char Output[] = { OUTPUT };	/* default output file name */
-static const char* output = Output;	/* output file name */
+static int debugging = 0;				/* debug decompiler? */
+static int functions = 0;				/* dump functions separately? */
+static int dumping = 1;					/* dump bytecodes? */
+static int stripping = 0;				/* strip debug information? */
+static char Output[] = { OUTPUT };		/* default output file name */
+static const char* output = Output;		/* output file name */
 static const char* progname = PROGNAME;	/* actual program name */
 
 void luaU_decompile(const Proto* f, int lflag, const char* filename);
-void luaU_decompileFunctions(const Proto* f, int lflag, const char ** filename);
+void luaU_decompileFunctions(const Proto* f, int lflag, const char** filename);
 
 static void fatal(const char* message)
 {
@@ -49,6 +49,11 @@ static void usage(const char* message, const char* arg)
 		"usage: %s [options] [filename].  Available options are:\n"
 		"  -        process stdin\n"
 		"  -d       output information for debugging the decompiler\n"
+		"  -f       decompile multiple files ("PROGNAME" file1 file2 file3...)\n"
+		"  -o       sets the output file name (default: '"OUTPUT"')\n"
+		"  -p       only parse file for errors\n"
+		"  -s       strips debug info\n"
+		"  -v       shows "PROGNAME" version\n"
 		"  --       stop handling options\n",
 		progname);
 	exit(EXIT_FAILURE);
@@ -62,7 +67,7 @@ static int doargs(int argc, char* argv[])
 	if (argv[0] != NULL && *argv[0] != 0) progname = argv[0];
 	for (i = 1; i < argc; i++)
 	{
-		if (*argv[i] != '-')			/* end of options; keep it */
+		if (*argv[i] != '-')		/* end of options; keep it */
 			break;
 		else if (IS("--"))			/* end of options; skip it */
 		{
@@ -78,7 +83,7 @@ static int doargs(int argc, char* argv[])
 		else if (IS("-o"))			/* output file */
 		{
 			output = argv[++i];
-			if (output == NULL || *output == 0) usage("`-o' needs argument", NULL);
+			if (output == NULL || *output == 0) usage("'-o' needs argument", NULL);
 		}
 		else if (IS("-p"))			/* parse only */
 			dumping = 0;
@@ -86,11 +91,11 @@ static int doargs(int argc, char* argv[])
 			stripping = 1;
 		else if (IS("-v"))			/* show version */
 		{
-			printf("luadec 0.1\n");
+			printf(PROGNAME" 0.1\n");
 			if (argc == 2) exit(EXIT_SUCCESS);
 		}
-		else					/* unknown option */
-			usage("unrecognized option `%s'", argv[i]);
+		else						/* unknown option */
+			usage("unrecognized option '%s'", argv[i]);
 	}
 	if (i == argc && (debugging || !dumping))
 	{
