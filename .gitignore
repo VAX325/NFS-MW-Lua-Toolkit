@@ -168,3 +168,6 @@ ipch/
 
 # Visual Studio Trace Files
 *.e2e
+
+# Visual Studio User Files
+*.user

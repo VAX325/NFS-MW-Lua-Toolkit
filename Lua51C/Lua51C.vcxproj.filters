@@ -1,156 +1,152 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Исходные файлы">
+    <Filter Include="Source">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Файлы заголовков">
+    <Filter Include="Headers">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Файлы ресурсов">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lparser.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lstate.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lstring.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="ltable.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="ltm.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lua.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lualib.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lundump.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lvm.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lzio.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lapi.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lauxlib.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lcode.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="ldebug.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="ldo.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lfunc.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lgc.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="llex.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="llimits.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lmem.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lobject.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="lopcodes.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lapi.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="lcode.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="ldebug.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="ldo.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="ldump.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="lfunc.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="lgc.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="llex.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="lmem.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="lobject.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="lopcodes.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="lparser.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="lstate.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="lstring.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="ltable.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="ltests.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="ltm.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="lundump.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="lvm.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="lzio.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="luac.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="print.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="lauxlib.c">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

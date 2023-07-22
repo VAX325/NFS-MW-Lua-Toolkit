@@ -72,7 +72,7 @@ typedef int (*lua_Chunkwriter) (lua_State* L, const void* p,
 
 /* type of numbers in Lua */
 #ifndef LUA_NUMBER
-typedef float lua_Number;
+typedef float lua_Number; // NFS MW uses float as lua_Number
 #else
 typedef LUA_NUMBER lua_Number;
 #endif
