@@ -1,6 +1,6 @@
 # NFS MW Lua toolkit
- Lua compiler and decompiler for Need for Speed Most Wanted.
- Based on Hisham Muhammad decompiler with some fixes for NFS MW Bytecode
+ Lua compiler and decompiler for Need for Speed Most Wanted.\
+ Based on Hisham Muhammad decompiler with some fixes for NFS MW Bytecode.\
  Use Win32 version, because NFS MW is 32bit app.
  
 # Some info
